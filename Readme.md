@@ -55,3 +55,12 @@ Let's delve into the exciting journey that will make you a Mongoose master! Here
 
 
 By diligently following this path and practicing the techniques you learn, you'll be well on your way to becoming a Mongoose Master and confidently managing your MongoDB data!
+
+## 15-1-A Install MongoDB compass & No SQL Booster ( windows)
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+copy the path name
+![alt text](image-3.png)
+double click in path name and click and past the evn
+![alt text](image-4.png)
