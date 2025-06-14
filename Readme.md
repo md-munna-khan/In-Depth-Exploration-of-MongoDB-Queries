@@ -64,3 +64,15 @@ copy the path name
 ![alt text](image-3.png)
 double click in path name and click and past the evn
 ![alt text](image-4.png)
+
+##  15-2 Insert,insertOne, find, findOne, field filtering, project
+![alt text](image-5.png)
+![alt text](image-6.png)
+- 1 when you add one item use insertOne
+- 2 when you add Many items use insertMany
+- 3 when you find One  items use FindOne
+- 4 when you find Many  items use Find
+###### Fill Filtering
+![alt text](image-7.png)
+- 2nd Method use project()
+![alt text](image-8.png)
