@@ -104,3 +104,46 @@ db.test.find({gender:"Female",age:{$lte:30,$gte:18}},{age:1,gender:1}).sort({ ag
   interests: {$in:["Travelling","Writing"]},
   ```
   ![alt text](image-19.png)
+## 15-5 $and, $or, implicit vs explicit
+- all data show but now show who is age 16
+```sql
+db.test.find({
+    $and: [
+        { age: { $ne: 16 } },
+        { age: { $lte: 30 } }
+    ]
+}).project({age:1,gender:1}).sort({age:-1 })
+  // implicit adn condition
+  ```
+  ![alt text](image-20.png)
+
+
+```sql
+db.test.find({
+    $or: [
+     { interests:"Cooking"},
+     { interests:"Gaming"},
+    ]
+}).project({interests:1}).sort({age:1 })
+```
+  ![alt text](image-21.png)
+
+  ```sql
+  db.test.find({
+    age:{$not:{$gte:50},},
+  
+}).project({interests:1,age:1})
+```
+![alt text](image-22.png)
+
+```sql
+db.test.find({"skills.name":{$in:["JAVASCRIPT","PYTHON"]}
+}).project({interests:1,skills:1}).sort({age:1 })
+// use or operatot
+// db.test.find({
+//     $or: [
+//       {"skills.name":"JAVASCRIPT"}
+//     ]
+// }).project({interests:1,skills:1}).sort({age:1 })
+  // implicit adn condition
+  ```
