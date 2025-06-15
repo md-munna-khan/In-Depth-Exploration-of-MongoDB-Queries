@@ -76,3 +76,15 @@ double click in path name and click and past the evn
 ![alt text](image-7.png)
 - 2nd Method use project()
 ![alt text](image-8.png)
+
+## 15-3 $eq, $neq, $gt, $lt, $gte, $lte
+#####  equal =
+![alt text](image-9.png)
+![alt text](image-10.png)
+##### not equal
+![alt text](image-11.png)
+##### greater than
+![alt text](image-12.png)
+##### greater than equal = then i am sorting
+![alt text](image-13.png)
+![alt text](image-14.png)
