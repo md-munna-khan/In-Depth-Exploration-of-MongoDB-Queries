@@ -88,3 +88,19 @@ double click in path name and click and past the evn
 ##### greater than equal = then i am sorting
 ![alt text](image-13.png)
 ![alt text](image-14.png)
+## 15-4 $in, $nin, implicit and condition
+```sql
+db.test.find({gender:"Female",age:{$lte:30,$gte:18}},{age:1,gender:1}).sort({ age:1 })
+```
+  // implicit adn condition
+  ![alt text](image-15.png)
+  - use $in
+  ![alt text](image-16.png)
+  - use not $in
+  ![alt text](image-17.png)
+  ![alt text](image-18.png)
+  - use $in
+  ```sql
+  interests: {$in:["Travelling","Writing"]},
+  ```
+  ![alt text](image-19.png)
