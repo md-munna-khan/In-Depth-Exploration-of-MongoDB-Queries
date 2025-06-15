@@ -147,3 +147,12 @@ db.test.find({"skills.name":{$in:["JAVASCRIPT","PYTHON"]}
 // }).project({interests:1,skills:1}).sort({age:1 })
   // implicit adn condition
   ```
+
+  ## 15-6 $exists, $type,$size
+  - $exists
+  ![alt text](image-23.png)
+  - $type
+  ![alt text](image-24.png)
+  
+ - $size 
+  ![alt text](image-25.png)
