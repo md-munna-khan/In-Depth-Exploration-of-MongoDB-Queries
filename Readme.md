@@ -180,3 +180,19 @@ same to same but if you want just match 2 values then show result use $eleMatch
 
 - $eleMatch
 ![alt text](image-31.png)
+## 15-8 $set, $addToSet, $push
+- updateOne
+![alt text](image-32.png)
+- non primitive type data  array,objects etc you dont use $set for update
+- before update interest 
+![alt text](image-33.png)
+![alt text](image-34.png)
+- after update
+![alt text](image-35.png)
+- $addToSet
+![alt text](image-36.png)
+- if you want one or more data added use $each
+- same value add just  one time 
+![alt text](image-37.png)
+- same value many time adding use push
+![alt text](image-38.png)
