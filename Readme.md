@@ -196,3 +196,15 @@ same to same but if you want just match 2 values then show result use $eleMatch
 ![alt text](image-37.png)
 - same value many time adding use push
 ![alt text](image-38.png)
+
+## 15-9 $unset, $pop, $pull, $pullAll
+- birthday is deleted
+![alt text](image-39.png)
+- pop last element deleted 
+- -1 use first element deleted
+![alt text](image-40.png)
+- pull tene ber kora
+![alt text](image-41.png)
+- pull all
+![alt text](image-42.png)
+![alt text](image-43.png)
