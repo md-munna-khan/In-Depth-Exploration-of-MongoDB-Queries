@@ -216,3 +216,8 @@ same to same but if you want just match 2 values then show result use $eleMatch
 ![alt text](image-45.png)
 - increment
 ![alt text](image-46.png)
+## 15-11 delete documents, drop collection and how to explore by yourself
+![alt text](image-47.png)
+![alt text](image-49.png)
+![alt text](image-48.png)
+![alt text](image-50.png)
