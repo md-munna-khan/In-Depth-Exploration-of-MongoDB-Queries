@@ -76,3 +76,107 @@ double click in path name and click and past the evn
 ![alt text](image-7.png)
 - 2nd Method use project()
 ![alt text](image-8.png)
+
+## 15-3 $eq, $neq, $gt, $lt, $gte, $lte
+#####  equal =
+![alt text](image-9.png)
+![alt text](image-10.png)
+##### not equal
+![alt text](image-11.png)
+##### greater than
+![alt text](image-12.png)
+##### greater than equal = then i am sorting
+![alt text](image-13.png)
+![alt text](image-14.png)
+## 15-4 $in, $nin, implicit and condition
+```sql
+db.test.find({gender:"Female",age:{$lte:30,$gte:18}},{age:1,gender:1}).sort({ age:1 })
+```
+  // implicit adn condition
+  ![alt text](image-15.png)
+  - use $in
+  ![alt text](image-16.png)
+  - use not $in
+  ![alt text](image-17.png)
+  ![alt text](image-18.png)
+  - use $in
+  ```sql
+  interests: {$in:["Travelling","Writing"]},
+  ```
+  ![alt text](image-19.png)
+## 15-5 $and, $or, implicit vs explicit
+- all data show but now show who is age 16
+```sql
+db.test.find({
+    $and: [
+        { age: { $ne: 16 } },
+        { age: { $lte: 30 } }
+    ]
+}).project({age:1,gender:1}).sort({age:-1 })
+  // implicit adn condition
+  ```
+  ![alt text](image-20.png)
+
+
+```sql
+db.test.find({
+    $or: [
+     { interests:"Cooking"},
+     { interests:"Gaming"},
+    ]
+}).project({interests:1}).sort({age:1 })
+```
+  ![alt text](image-21.png)
+
+  ```sql
+  db.test.find({
+    age:{$not:{$gte:50},},
+  
+}).project({interests:1,age:1})
+```
+![alt text](image-22.png)
+
+```sql
+db.test.find({"skills.name":{$in:["JAVASCRIPT","PYTHON"]}
+}).project({interests:1,skills:1}).sort({age:1 })
+// use or operatot
+// db.test.find({
+//     $or: [
+//       {"skills.name":"JAVASCRIPT"}
+//     ]
+// }).project({interests:1,skills:1}).sort({age:1 })
+  // implicit adn condition
+  ```
+
+  ## 15-6 $exists, $type,$size
+  - $exists
+  ![alt text](image-23.png)
+  - $type
+  ![alt text](image-24.png)
+
+ - $size 
+  ![alt text](image-25.png)
+
+  ## 15-7 $all , $elemMatch
+  - if anyone want  cooking array of he find out index type and field must be string
+
+  db.test.find({"interests.1":"Cooking"},{interests:1})
+  ![alt text](image-26.png)
+
+
+  - all operators he is find same array of objects not need same to same match
+```sql
+  db.test.find({
+ interests:{$all:[ "Gaming", "Cooking", "Writing" ]}
+  
+}).project({interests:1})
+```
+![alt text](image-27.png)
+
+- output not showing because he is also want adject match
+![alt text](image-28.png)
+same to same but if you want just match 2 values then show result use $eleMatch
+![alt text](image-29.png)
+
+- $eleMatch
+![alt text](image-31.png)
