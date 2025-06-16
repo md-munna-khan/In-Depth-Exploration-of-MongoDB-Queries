@@ -208,3 +208,11 @@ same to same but if you want just match 2 values then show result use $eleMatch
 - pull all
 ![alt text](image-42.png)
 ![alt text](image-43.png)
+
+## 15-10 More about $set, how to explore documentation
+- objects update use set
+![alt text](image-44.png)
+- positional operator
+![alt text](image-45.png)
+- increment
+![alt text](image-46.png)
