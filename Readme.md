@@ -153,6 +153,30 @@ db.test.find({"skills.name":{$in:["JAVASCRIPT","PYTHON"]}
   ![alt text](image-23.png)
   - $type
   ![alt text](image-24.png)
-  
+
  - $size 
   ![alt text](image-25.png)
+
+  ## 15-7 $all , $elemMatch
+  - if anyone want  cooking array of he find out index type and field must be string
+
+  db.test.find({"interests.1":"Cooking"},{interests:1})
+  ![alt text](image-26.png)
+
+
+  - all operators he is find same array of objects not need same to same match
+```sql
+  db.test.find({
+ interests:{$all:[ "Gaming", "Cooking", "Writing" ]}
+  
+}).project({interests:1})
+```
+![alt text](image-27.png)
+
+- output not showing because he is also want adject match
+![alt text](image-28.png)
+same to same but if you want just match 2 values then show result use $eleMatch
+![alt text](image-29.png)
+
+- $eleMatch
+![alt text](image-31.png)
