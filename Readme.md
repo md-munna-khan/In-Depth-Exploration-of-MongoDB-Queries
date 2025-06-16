@@ -216,3 +216,14 @@ same to same but if you want just match 2 values then show result use $eleMatch
 ![alt text](image-45.png)
 - increment
 ![alt text](image-46.png)
+## 15-11 delete documents, drop collection and how to explore by yourself
+![alt text](image-47.png)
+![alt text](image-49.png)
+![alt text](image-48.png)
+![alt text](image-50.png)
+
+Practice Data: https://github.com/Apollo-Level2-Web-Dev/mongodb-practice/blob/main/practice-data.json
+
+
+
+Task Link: https://drive.google.com/file/d/1Be22y-R8C8SIMg_FOfYm8toz0swpocTT/view?usp=sharing
